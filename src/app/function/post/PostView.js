@@ -13,11 +13,9 @@ const Section = styled.div`
 `
 
 const Article = styled.article`
-border-radius: 20px;
-background-color: lightPink;
-padding:5px
-
-
+  border-radius: 20px;
+  background-color: lightPink;
+  padding: 5px;
 `
 
 const Button = styled.button`
@@ -48,10 +46,10 @@ const PostView = () => {
   const somePost = [...post.slice(0, number)]
 
   const handleIncrease = () => {
-    setNumber(number + 3)
+    setNumber(number + 6)
   }
   const handleDecrease = () => {
-    setNumber(number - 3)
+    setNumber(number - 6)
   }
 
   return (
@@ -67,16 +65,13 @@ const PostView = () => {
             </Article>
           ))}
       </Section>
-      <Button  onClick={() => handleDecrease()}>
-        {"<<"}previews
-      </Button>
+      {somePost.length > 6 && (
+        <Button onClick={() => handleDecrease()}>{"<<"}previews</Button>
+      )}
 
-      <Button
-       
-        onClick={() => handleIncrease()}
-      >
-        see more{">>"}
-      </Button>
+      {somePost.length < post.length && (
+        <Button onClick={() => handleIncrease()}>see more{">>"}</Button>
+      )}
     </div>
   )
 }
