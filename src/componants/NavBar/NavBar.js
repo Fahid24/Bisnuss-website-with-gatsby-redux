@@ -86,7 +86,7 @@ const NavBar = () => {
         <Navbar className="Navbar">
       <img
       alt=' hh'
-        Style={"width:120px"}
+        style={{width:"120px"}}
         src="https://raw.githubusercontent.com/Fahid24/business-site-task-css/main/src/Images/images-removebg-preview.png"
       />
 

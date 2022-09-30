@@ -78,7 +78,7 @@ const Product = () => {
       {products.map(product => (
         <Card key={product.id}>
           <img
-            Style={"border-radius: 20px 20px 0 0;"}
+            style={{borderRadius: '20px 20px 0 0'}}
             src={product.img}
             alt={product.type}
           />
